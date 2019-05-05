@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:CircleProgressView="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_horizontal_margin"
+    tools:layout_editor_absoluteY="81dp">
+
+
+    <LinearLayout
+        android:layout_width="302dp"
+        android:layout_height="422dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:gravity="top"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <Button
+            android:id="@+id/partialScan"
+            android:layout_width="245dp"
+            android:layout_height="243dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/round_button"
+            android:text="Scan"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="135dp"
+            tools:layout_editor_absoluteY="80dp" />
+
+        <CheckBox
+            android:id="@+id/fullscan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="76dp"
+            android:layout_marginTop="@android:dimen/app_icon_size"
+            android:text="Include System Apps" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="156dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="83dp"
+            android:text="*Note: System Apps can    take longer time."
+            android:textColor="@android:color/background_dark" />
+
+    </LinearLayout>
+
+    <at.grabner.circleprogress.CircleProgressView
+        android:id="@+id/circleView"
+        android:layout_width="401dp"
+        android:layout_height="278dp"
+        android:clickable="false"
+        android:contextClickable="false"
+        android:focusableInTouchMode="false"
+        android:focusedByDefault="false"
+        android:forceHasOverlappingRendering="false"
+        android:textAlignment="center"
+        android:visibility="invisible"
+        CircleProgressView:cpv_blockCount="18"
+        CircleProgressView:cpv_blockScale="0.9"
+        CircleProgressView:cpv_autoTextSize="true"
+        CircleProgressView:cpv_barColor="@color/progress_bar_text_color"
+        CircleProgressView:cpv_barWidth="35dp"
+        CircleProgressView:cpv_innerContourSize="0dp"
+        CircleProgressView:cpv_maxValue="100"
+        CircleProgressView:cpv_outerContourSize="0dp"
+        CircleProgressView:cpv_rimColor="?android:attr/colorLongPressedHighlight"
+        CircleProgressView:cpv_rimWidth="35dp"
+        CircleProgressView:cpv_seekMode="true"
+        CircleProgressView:cpv_showTextInSpinningMode="true"
+        CircleProgressView:cpv_showUnit="true"
+        CircleProgressView:cpv_spinColor="@color/progress_bar_text_color"
+        CircleProgressView:cpv_textColor="@color/progress_bar_text_color"
+        CircleProgressView:cpv_textScale="1"
+        CircleProgressView:cpv_unit="%"
+        CircleProgressView:cpv_unitColor="@android:color/darker_gray"
+        CircleProgressView:cpv_unitPosition="right_top"
+        CircleProgressView:cpv_unitScale="1"
+        CircleProgressView:cpv_value="0"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+
+</RelativeLayout>

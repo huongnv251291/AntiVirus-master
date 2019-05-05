@@ -1,0 +1,68 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
+    defaultConfig {
+        applicationId "com.example.capk.antivirus"
+        minSdkVersion 21
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+
+}
+
+dependencies {
+    compile 'net.dongliu:apk-parser:2.5.3'
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:26.+'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:design:26.+'
+    compile 'eu.chainfire:libsuperuser:1.0.0.+'
+    testCompile 'junit:junit:4.12'
+    compile 'com.google.guava:guava:16.0.1'
+//    compile files('commons-codec-1.11/commons-codec-1.11.jar')
+//    compile files('commons-io-2.6/commons-io-2.6.jar')
+    compile 'com.jaredrummler:apk-parser:1.0.2'
+    compile 'com.github.jakob-grabner:Circle-Progress-View:v1.3'
+    compile 'com.android.support:cardview-v7:26.+'
+
+    // RecyclerView
+    compile 'com.android.support:recyclerview-v7:26.+'
+
+    // Glide
+    android{
+        useLibrary  'org.apache.http.legacy'
+    }
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.android.volley:volley:1.1.0'
+    compile 'com.squareup.okhttp:okhttp:2.1.0'
+    compile 'com.squareup.okhttp3:okhttp:3.3.1'
+    compile 'io.tus.android.client:tus-android-client:0.1.5'
+    compile('org.apache.httpcomponents:httpmime:4.3.6') {
+        exclude module: 'httpclient'
+    }
+    testCompile 'junit:junit:4.12'
+    testImplementation 'org.mockito:mockito-core:1.10.19'
+
+    androidTestCompile 'com.android.support.test.espresso:espresso-contrib:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+        exclude group: 'com.android.support', module: 'support-v4'
+        exclude group: 'com.android.support', module: 'design'
+        exclude group: 'com.android.support', module: 'recyclerview-v7'
+    }
+}
